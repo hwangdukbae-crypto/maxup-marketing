@@ -1,0 +1,1476 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>병원마케팅 대행 맥스업 | 의료법 안에서 안전한 병의원 콘텐츠 마케팅</title>
+<meta name="description" content="병원마케팅 대행 맥스업. 숏폼 제작·병원 블로그 관리·네이버 플레이스를 하나의 동선으로 연결합니다. 의료광고 사전심의 준수, 의료법 14개 금지유형 사전 체크, 환자 수 연동 없는 정액제, 최소 계약 1개월.">
+<link rel="canonical" href="https://maxup-marketing.vercel.app/">
+<!-- 배포 후: 아래 https://maxup-marketing.vercel.app 을 실제 배포 주소로 전부 교체 (canonical, og:url, og:image, JSON-LD, sitemap.xml, robots.txt) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="맥스업마케팅">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:url" content="https://maxup-marketing.vercel.app/">
+<meta property="og:title" content="병원마케팅 대행 맥스업 — 원장님의 잠재력을 최대치까지">
+<meta property="og:description" content="숏폼·병원 블로그·플레이스를 하나의 동선으로. 의료광고 사전심의 준수 · 정액제 · 최소 계약 1개월.">
+<meta property="og:image" content="https://maxup-marketing.vercel.app/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="병원마케팅 대행 맥스업 — 원장님의 잠재력을 최대치까지">
+<meta name="twitter:description" content="숏폼·병원 블로그·플레이스를 하나의 동선으로. 의료광고 사전심의 준수 · 정액제 · 최소 계약 1개월.">
+<meta name="twitter:image" content="https://maxup-marketing.vercel.app/og.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A1114'/%3E%3Cpath d='M18 46 L38 26 M38 26 H24 M38 26 V40' stroke='%234DE0D0' stroke-width='6' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,500..900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0A1114;
+  --surface:#111C1E;
+  --surface-2:#0D1719;
+  --mint:#4DE0D0;
+  --mint-light:#C9F6EE;
+  --teal:#1A5E58;
+  --teal-deep:#062421;
+  --ink:#F2F4F2;
+  --sub:#8FA09B;
+  --faint:#5F7A78;
+  --line:rgba(201,246,238,0.10);
+  --line-strong:rgba(201,246,238,0.22);
+  --glass:rgba(13,23,25,0.55);
+  --max-w:1180px;
+  --ease:cubic-bezier(.22,.61,.2,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:'Pretendard Variable',Pretendard,-apple-system,sans-serif;
+  font-size:16px;line-height:1.7;
+  word-break:keep-all;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+::selection{background:var(--mint);color:var(--teal-deep)}
+a{color:inherit;text-decoration:none}
+img,video{max-width:100%;display:block}
+button{font-family:inherit;cursor:pointer}
+.inner{max-width:var(--max-w);margin:0 auto;padding:0 24px}
+section{position:relative}
+
+/* ---------- 공통 타이포 ---------- */
+.eyebrow{
+  font-family:'Archivo',sans-serif;
+  font-stretch:125%;
+  font-weight:600;
+  font-size:12px;
+  letter-spacing:.28em;
+  color:var(--mint);
+  text-transform:uppercase;
+  display:flex;align-items:center;gap:14px;
+  margin-bottom:22px;
+}
+.eyebrow::before{content:"";width:28px;height:1px;background:var(--mint);opacity:.6}
+.h2{
+  font-size:clamp(27px,3.4vw,40px);
+  font-weight:700;
+  line-height:1.28;
+  letter-spacing:-0.03em;
+}
+.h2 em{font-style:normal;color:var(--mint)}
+.lead{color:var(--sub);font-size:clamp(14.5px,1.4vw,16.5px);line-height:1.85}
+
+/* ---------- 스크롤 리빌 ---------- */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.rv-d1{transition-delay:.08s}.rv-d2{transition-delay:.16s}.rv-d3{transition-delay:.24s}.rv-d4{transition-delay:.32s}
+@media (prefers-reduced-motion:reduce){
+  .rv{opacity:1;transform:none;transition:none}
+  *{animation-duration:.01ms !important;animation-iteration-count:1 !important}
+  html{scroll-behavior:auto}
+}
+
+/* ---------- 네비게이션 ---------- */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  transition:background .4s,border-color .4s,backdrop-filter .4s;
+  border-bottom:1px solid transparent;
+}
+nav.scrolled{
+  background:var(--glass);
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+  border-bottom-color:var(--line);
+}
+.nav-in{
+  max-width:var(--max-w);margin:0 auto;padding:0 24px;
+  height:72px;display:flex;align-items:center;justify-content:space-between;
+}
+.logo{
+  font-family:'Archivo',sans-serif;font-stretch:125%;font-weight:800;
+  font-size:19px;letter-spacing:.06em;
+  background:linear-gradient(105deg,var(--mint-light),var(--mint));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.nav-links{display:flex;align-items:center;gap:34px;list-style:none}
+.nav-links a{font-size:14px;color:var(--sub);transition:color .3s}
+.nav-links a:hover{color:var(--ink)}
+.nav-cta{
+  padding:10px 22px;border-radius:8px;
+  background:var(--mint);color:var(--teal-deep) !important;
+  font-weight:600;font-size:14px;
+  transition:transform .25s var(--ease),box-shadow .25s;
+}
+.nav-cta:hover{transform:translateY(-1px)}
+.burger{display:none;background:none;border:0;width:44px;height:44px;position:relative;z-index:110}
+.burger span{display:block;width:22px;height:1.5px;background:var(--ink);margin:5px auto;transition:.35s var(--ease)}
+.burger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.nav-mobile{
+  display:none;position:fixed;inset:0;z-index:105;
+  background:rgba(10,17,20,0.96);backdrop-filter:blur(20px);
+  flex-direction:column;justify-content:center;align-items:center;gap:34px;
+}
+.nav-mobile.open{display:flex}
+.nav-mobile a{font-size:22px;font-weight:600;color:var(--ink)}
+.nav-mobile .nav-cta{font-size:16px}
+
+/* ---------- S01 HERO — 배경 우선, 요소 최소화 ---------- */
+#hero{
+  min-height:100svh;
+  display:flex;flex-direction:column;justify-content:center;
+  overflow:hidden;
+}
+.hero-media{position:absolute;inset:0;z-index:0}
+.hero-media video{width:100%;height:100%;object-fit:cover;opacity:.85}
+/* 원석 글로우 — 시댄스 영상 준비 전 폴백. 영상 삽입 후에도 보조광으로 유지 가능 */
+.gem-glow{position:absolute;inset:0;pointer-events:none}
+.gem-glow::before{
+  content:"";position:absolute;
+  width:82vmin;height:82vmin;left:56%;top:52%;
+  transform:translate(-50%,-50%);
+  background:
+    radial-gradient(closest-side,rgba(77,224,208,0.24),transparent 68%),
+    radial-gradient(closest-side at 38% 60%,rgba(201,246,238,0.12),transparent 55%);
+  filter:blur(26px);
+  animation:breathe 11s ease-in-out infinite;
+}
+.gem-glow::after{
+  content:"";position:absolute;
+  width:38vmin;height:38vmin;left:64%;top:44%;
+  transform:translate(-50%,-50%);
+  background:radial-gradient(closest-side,rgba(77,224,208,0.18),transparent 70%);
+  filter:blur(32px);
+  animation:breathe 14s ease-in-out infinite reverse;
+}
+@keyframes breathe{
+  0%,100%{opacity:.75;transform:translate(-50%,-50%) scale(1)}
+  50%{opacity:1;transform:translate(-50%,-50%) scale(1.07)}
+}
+.hero-vignette{
+  position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:
+    linear-gradient(90deg,rgba(10,17,20,.6) 0%,rgba(10,17,20,.22) 34%,transparent 50%,rgba(10,17,20,.14) 62%,rgba(10,17,20,.38) 74%,rgba(10,17,20,.62) 86%,rgba(10,17,20,.82) 100%),
+    linear-gradient(180deg,rgba(10,17,20,.5) 0%,transparent 22%,transparent 74%,var(--bg) 100%);
+}
+.hero-in{
+  position:relative;z-index:2;width:100%;
+  max-width:1520px;margin:0 auto;
+  padding:100px clamp(24px,5vw,72px) 120px;
+  display:grid;grid-template-columns:1fr auto;
+  align-items:center;gap:clamp(30px,6vw,100px);
+  flex:1;
+}
+.hero-eyebrow{
+  font-family:'Archivo',sans-serif;font-stretch:125%;font-weight:600;
+  font-size:10.5px;letter-spacing:.32em;color:rgba(201,246,238,0.45);
+  text-transform:uppercase;margin-bottom:20px;
+}
+.hero-title{
+  font-size:clamp(24px,2.9vw,42px);
+  font-weight:700;line-height:1.42;letter-spacing:-0.028em;
+  text-shadow:0 2px 24px rgba(10,17,20,.55);
+}
+.hero-title em{font-style:normal;color:var(--mint)}
+.hero-sub{
+  margin-top:18px;max-width:26em;
+  color:rgba(174,187,182,0.85);font-size:13.5px;line-height:1.9;
+  text-shadow:0 1px 14px rgba(10,17,20,.6);
+}
+.hero-points{
+  display:flex;flex-direction:column;gap:19px;
+  text-align:right;align-items:flex-end;
+}
+.hero-points .pt{
+  display:flex;align-items:center;gap:12px;flex-direction:row-reverse;
+  color:#E9EEEC;font-size:13px;font-weight:500;letter-spacing:.015em;white-space:nowrap;
+  text-shadow:0 1px 4px rgba(6,14,16,.9),0 2px 14px rgba(6,14,16,.7);
+}
+.hero-points .pt::after{
+  content:"";width:5px;height:5px;flex:none;
+  background:var(--mint);
+  transform:rotate(45deg);
+  box-shadow:0 0 8px rgba(77,224,208,.5);
+}
+.hero-cta{
+  position:absolute;left:0;right:0;bottom:42px;
+  margin:0 auto;width:max-content;
+  z-index:3;
+  display:inline-flex;align-items:center;gap:9px;
+  padding:13px 30px;border-radius:999px;
+  background:rgba(242,244,242,0.94);color:#0E1A1C;
+  font-family:'Pretendard Variable',Pretendard,sans-serif;
+  font-weight:700;font-size:14px;letter-spacing:.02em;
+  backdrop-filter:blur(10px);
+  transition:transform .3s var(--ease),background .3s,box-shadow .3s;
+  white-space:nowrap;
+}
+.hero-cta:hover{
+  transform:translateY(-2px);
+  background:var(--mint);
+  box-shadow:0 14px 40px rgba(77,224,208,.28);
+}
+.btn-mint{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:16px 32px;border-radius:10px;border:0;
+  background:var(--mint);color:var(--teal-deep);
+  font-weight:700;font-size:15px;
+  transition:transform .25s var(--ease),box-shadow .3s;
+}
+.btn-mint:hover{transform:translateY(-2px);box-shadow:0 12px 34px rgba(77,224,208,.22)}
+.btn-mint .arr{transition:transform .25s var(--ease)}
+.btn-mint:hover .arr{transform:translateX(3px)}
+.btn-line{
+  display:inline-flex;align-items:center;
+  padding:16px 32px;border-radius:10px;
+  background:rgba(10,17,20,0.3);
+  border:1px solid var(--line-strong);
+  color:var(--ink);font-weight:500;font-size:15px;
+  backdrop-filter:blur(8px);
+  transition:border-color .3s,background .3s;
+}
+.btn-line:hover{border-color:var(--mint);background:rgba(77,224,208,0.06)}
+
+/* ---------- 마키 ---------- */
+.marquee{
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  overflow:hidden;padding:20px 0;background:var(--surface-2);
+}
+.mq-track{display:flex;gap:0;width:max-content;animation:mq 46s linear infinite}
+.mq-track span{
+  font-family:'Archivo',sans-serif;font-stretch:125%;font-weight:600;
+  font-size:13px;letter-spacing:.22em;color:var(--faint);
+  text-transform:uppercase;white-space:nowrap;
+  padding:0 34px;position:relative;
+}
+.mq-track span::after{content:"";position:absolute;right:-3px;top:50%;width:5px;height:5px;border-radius:50%;background:var(--teal);transform:translateY(-50%)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* ---------- S02a 스크롤 시퀀스 ---------- */
+#seq{height:420svh;position:relative}
+.seq-sticky{
+  position:sticky;top:0;height:100svh;
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;
+}
+.seq-item{
+  position:absolute;left:50%;top:50%;
+  width:min(90vw,880px);
+  transform:translate(-50%,-50%);
+  text-align:center;
+  opacity:0;
+  will-change:transform,opacity;
+}
+.seq-item p{
+  font-size:clamp(22px,3.4vw,40px);
+  font-weight:700;line-height:1.5;letter-spacing:-0.03em;
+  color:#B9C4C0;
+}
+.seq-item p strong{font-weight:800;color:var(--ink)}
+.seq-item p em{font-style:normal;color:var(--mint)}
+.seq-item .seq-eyebrow{
+  font-family:'Archivo',sans-serif;font-stretch:125%;font-weight:600;
+  font-size:12px;letter-spacing:.32em;color:var(--faint);
+  text-transform:uppercase;margin-bottom:26px;
+}
+.seq-hint{
+  position:absolute;left:50%;bottom:30px;transform:translateX(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:10px;
+  color:var(--faint);font-size:11px;letter-spacing:.24em;
+  font-family:'Archivo',sans-serif;font-stretch:125%;
+  transition:opacity .4s;
+}
+.seq-hint::before{
+  content:"";width:1px;height:40px;
+  background:linear-gradient(transparent,var(--faint));
+}
+@media (prefers-reduced-motion:reduce){
+  #seq{height:auto;padding:90px 0}
+  .seq-sticky{position:static;height:auto;flex-direction:column;gap:60px;padding:0 24px}
+  .seq-item{position:static;transform:none;opacity:1;width:auto}
+  .seq-hint{display:none}
+}
+
+/* ---------- S02 PAIN ---------- */
+#pain{
+  padding:clamp(76px,9.5vw,130px) 0;
+  background:
+    linear-gradient(180deg,var(--bg) 0%,rgba(10,17,20,.72) 18%,rgba(10,17,20,.7) 72%,var(--bg) 100%),
+    url('assets/gem-dormant.webp') center/cover no-repeat;
+}
+.pain-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(40px,6vw,90px);align-items:start}
+.pain-list{display:flex;flex-direction:column;border-top:1px solid var(--line)}
+.pain-item{
+  display:flex;gap:22px;align-items:baseline;
+  padding:26px 4px;border-bottom:1px solid var(--line);
+  transition:background .3s;
+}
+.pain-item:hover{background:rgba(201,246,238,0.02)}
+.pain-item .no{
+  font-family:'Archivo',sans-serif;font-stretch:125%;font-weight:700;
+  font-size:13px;color:var(--faint);letter-spacing:.1em;min-width:30px;
+}
+.pain-item p{font-size:clamp(15.5px,1.6vw,17.5px);font-weight:600;letter-spacing:-.015em}
+.pain-item small{display:block;margin-top:6px;font-size:14px;font-weight:400;color:var(--sub)}
+
+/* ---------- S03 SOLUTION — 플립 카드 ---------- */
+#solution{
+  padding:clamp(76px,9.5vw,130px) 0;
+  background:
+    linear-gradient(180deg,var(--bg) 0%,rgba(10,17,20,.8) 12%,rgba(10,17,20,.62) 48%,rgba(10,17,20,.78) 88%,var(--surface-2) 100%),
+    url('assets/gem-awake.webp') center/cover no-repeat;
+}
+#solution .head{text-align:center;margin-bottom:clamp(50px,7vw,90px)}
+#solution .head .eyebrow{justify-content:center}
+.sol-cards{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:clamp(16px,2.4vw,26px);
+}
+.flip{
+  perspective:1400px;
+  min-height:clamp(300px,30vw,380px);
+  cursor:pointer;
+  outline:none;
+}
+.flip-inner{
+  position:relative;width:100%;height:100%;
+  transform-style:preserve-3d;
+  transition:transform .8s var(--ease);
+}
+.flip:hover .flip-inner,
+.flip.on .flip-inner,
+.flip:focus-visible .flip-inner{transform:rotateY(180deg)}
+.flip-face{
+  position:absolute;inset:0;
+  backface-visibility:hidden;
+  -webkit-backface-visibility:hidden;
+  border-radius:14px;
+  display:flex;flex-direction:column;
+  padding:clamp(26px,3vw,38px);
+}
+.flip-front{
+  background:var(--surface);
+  border:1px solid var(--line);
+  align-items:center;justify-content:center;text-align:center;
+}
+.flip-front .fno{
+  position:absolute;top:22px;left:26px;
+  font-family:'Archivo',sans-serif;font-stretch:125%;font-weight:800;
+  font-size:clamp(34px,3.6vw,46px);line-height:1;font-style:italic;
+  color:transparent;-webkit-text-stroke:1px rgba(201,246,238,0.16);
+}
+.flip-front .fkey{
+  font-size:clamp(26px,2.8vw,34px);
+  font-weight:800;letter-spacing:-.03em;line-height:1;
+  color:var(--mint);
+  margin-bottom:16px;
+}
+.flip-front h3{
+  font-size:clamp(15px,1.7vw,17.5px);font-weight:500;
+  letter-spacing:-.01em;line-height:1.6;color:var(--sub);
+}
+.flip-back{
+  background:var(--mint);
+  color:var(--teal-deep);
+  transform:rotateY(180deg);
+  justify-content:center;
+}
+.flip-back .bk{
+  font-family:'Archivo',sans-serif;font-stretch:125%;font-weight:700;
+  font-size:11px;letter-spacing:.24em;text-transform:uppercase;
+  opacity:.65;margin-bottom:16px;
+}
+.flip-back h4{
+  font-size:clamp(17px,1.9vw,21px);font-weight:800;
+  letter-spacing:-.02em;line-height:1.45;margin-bottom:14px;
+}
+.flip-back p{font-size:14.5px;line-height:1.75;font-weight:500;opacity:.9}
+@media (prefers-reduced-motion:reduce){
+  .flip-inner{transition:none}
+}
+
+/* ---------- S04 STRATEGY ---------- */
+#strategy{padding:clamp(76px,9.5vw,130px) 0}
+.strat-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:clamp(40px,5vw,64px);flex-wrap:wrap}
+.sel-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:40px}
+.sel-btn{
+  padding:13px 26px;border-radius:999px;
+  background:transparent;border:1px solid var(--line-strong);
+  color:var(--sub);font-size:15px;font-weight:500;
+  transition:all .3s var(--ease);
+}
+.sel-btn:hover{border-color:var(--mint);color:var(--ink)}
+.sel-btn.active{background:var(--mint);border-color:var(--mint);color:var(--teal-deep);font-weight:700}
+.strat-panel{
+  display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(36px,5vw,70px);
+  border:1px solid var(--line);background:var(--surface);
+  padding:clamp(30px,4.5vw,56px);
+  opacity:1;transition:opacity .35s;
+}
+.strat-panel.fade{opacity:0}
+.strat-tag{
+  display:inline-block;padding:6px 14px;border-radius:999px;
+  background:rgba(77,224,208,0.08);border:1px solid rgba(77,224,208,0.3);
+  color:var(--mint-light);font-size:12.5px;margin-bottom:22px;
+}
+.strat-title{font-size:clamp(22px,2.5vw,30px);font-weight:700;line-height:1.35;letter-spacing:-.025em;white-space:pre-line}
+.strat-desc{margin-top:18px;color:var(--sub);font-size:15.5px}
+.strat-cta{margin-top:30px;display:inline-flex}
+.ch-list{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--line)}
+.ch-row{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:18px 2px;border-bottom:1px solid var(--line);
+  opacity:0;transform:translateX(14px);transition:opacity .5s var(--ease),transform .5s var(--ease);
+}
+.ch-row.show{opacity:1;transform:none}
+.ch-name{font-size:15.5px;font-weight:600;display:flex;align-items:center;gap:12px}
+.ch-rank{font-size:11.5px;color:var(--mint);border:1px solid rgba(77,224,208,.35);padding:3px 9px;border-radius:999px;font-weight:500}
+.ch-rank.dim{color:var(--faint);border-color:var(--line)}
+.dots{display:flex;gap:6px}
+.dot{width:8px;height:8px;border-radius:50%;background:rgba(201,246,238,0.10)}
+.dot.on{background:var(--mint)}
+.dot.dim-on{background:var(--teal)}
+
+/* ---------- S05 SAMPLES ---------- */
+
+/* ---------- S06 PRICING ---------- */
+#pricing{padding:clamp(76px,9.5vw,130px) 0}
+.case-strip{
+  display:flex;gap:10px 26px;flex-wrap:wrap;
+  margin-top:26px;
+}
+.case-strip span{
+  display:flex;align-items:center;gap:9px;
+  color:var(--sub);font-size:13.5px;
+}
+.case-strip span::before{
+  content:"";width:5px;height:5px;flex:none;
+  background:var(--mint);transform:rotate(45deg);
+}
+.ptabs{display:flex;gap:10px;flex-wrap:wrap;margin-top:clamp(30px,4vw,44px)}
+.pgroup{
+  border:1px solid var(--line);
+  margin-top:18px;
+}
+.pgroup-head{
+  display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;
+  padding:15px clamp(18px,2.6vw,30px);
+  background:var(--surface);border-bottom:1px solid var(--line);
+}
+.pgroup-head h3{font-size:17px;font-weight:700;letter-spacing:-.015em}
+.pgroup-head small{color:var(--faint);font-size:12.5px;letter-spacing:.02em}
+.prow{
+  display:grid;
+  grid-template-columns:minmax(130px,190px) 1fr auto auto;
+  gap:12px clamp(16px,2.5vw,30px);
+  align-items:center;
+  padding:14px clamp(18px,2.6vw,30px);
+}
+.prow + .prow{border-top:1px solid var(--line)}
+.prow .nm{font-weight:700;font-size:15.5px;letter-spacing:-.01em}
+.prow .cfg{color:var(--sub);font-size:13.5px;line-height:1.65}
+.prow .was{color:var(--faint);text-decoration:line-through;font-size:13.5px;text-align:right;white-space:nowrap}
+.prow .now{color:var(--mint);font-weight:800;font-size:16.5px;text-align:right;white-space:nowrap;letter-spacing:-.02em}
+.prow .now small{font-weight:500;font-size:12px;color:var(--sub)}
+.packs-title{
+  margin-top:clamp(40px,5vw,56px);margin-bottom:clamp(20px,2.6vw,28px);
+  display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;
+}
+.packs-title h3{font-size:clamp(20px,2.4vw,26px);font-weight:700;letter-spacing:-.02em}
+.packs-title small{color:var(--faint);font-size:13px}
+.compare{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+  background:var(--line);border:1px solid var(--line);
+  margin:clamp(34px,4.5vw,48px) 0 clamp(40px,5vw,56px);
+}
+.cmp-col{background:var(--bg);padding:clamp(20px,2.4vw,30px)}
+.cmp-col.hl{background:var(--surface);position:relative}
+.cmp-col.hl::before{content:"";position:absolute;inset:-1px;border:1px solid var(--mint);pointer-events:none}
+.cmp-col .who{font-size:13px;color:var(--faint);letter-spacing:.06em;margin-bottom:14px}
+.cmp-col .price{font-size:clamp(20px,2.2vw,26px);font-weight:800;letter-spacing:-.03em}
+.cmp-col .price small{font-size:14px;font-weight:500;color:var(--sub)}
+.cmp-col.hl .price{color:var(--mint)}
+.cmp-col ul{list-style:none;margin-top:22px;display:flex;flex-direction:column;gap:10px}
+.cmp-col li{font-size:14px;color:var(--sub);padding-left:18px;position:relative}
+.cmp-col li::before{content:"—";position:absolute;left:0;color:var(--faint)}
+.cmp-col.hl li::before{content:"+";color:var(--mint)}
+.packs{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2.4vw,26px)}
+.pack{
+  border:1px solid var(--line);background:var(--surface);
+  padding:clamp(22px,2.6vw,32px) clamp(20px,2.6vw,28px);
+  display:flex;flex-direction:column;
+  transition:transform .45s var(--ease),border-color .35s;
+}
+.pack:hover{transform:translateY(-6px);border-color:var(--line-strong)}
+.pack.best{border-color:var(--mint);position:relative}
+.pack.best .flag{
+  position:absolute;top:-13px;left:28px;
+  background:var(--mint);color:var(--teal-deep);
+  font-size:11.5px;font-weight:700;letter-spacing:.05em;
+  padding:5px 14px;border-radius:999px;
+}
+.pack h3{font-size:19px;font-weight:700;letter-spacing:-.02em}
+.pack .for{color:var(--faint);font-size:13.5px;margin-top:6px}
+.pack .pr{margin:18px 0 2px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.pack .was{color:var(--faint);text-decoration:line-through;font-size:15px}
+.pack .now{font-size:clamp(23px,2.4vw,28px);font-weight:800;letter-spacing:-.03em;color:var(--mint)}
+.pack .per{color:var(--sub);font-size:13.5px}
+.pack ul{list-style:none;margin:18px 0 22px;display:flex;flex-direction:column;gap:9px;flex:1}
+.pack li{font-size:14.5px;color:var(--sub);padding-left:20px;position:relative}
+.pack li::before{content:"";position:absolute;left:0;top:9px;width:8px;height:8px;border-radius:2px;background:var(--teal)}
+.pack.best li::before{background:var(--mint)}
+.pack .btn-line,.pack .btn-mint{justify-content:center;width:100%;padding:14px}
+.case-banner{
+  margin-top:clamp(40px,5vw,56px);
+  border:1px solid rgba(77,224,208,0.3);
+  background:linear-gradient(120deg,rgba(77,224,208,0.07),rgba(26,94,88,0.10));
+  padding:clamp(24px,3.2vw,38px);
+  display:flex;justify-content:space-between;align-items:center;gap:26px;flex-wrap:wrap;
+}
+.case-banner h3{font-size:clamp(19px,2vw,24px);font-weight:800;letter-spacing:-.025em;line-height:1.4}
+.case-banner h3 em{font-style:normal;color:var(--mint)}
+.case-banner p{color:var(--sub);font-size:14.5px;margin-top:10px;max-width:34em}
+.pricing-note{margin-top:26px;color:var(--faint);font-size:13px;line-height:1.8}
+
+/* ---------- S07 PROCESS ---------- */
+#process{padding:clamp(76px,9.5vw,130px) 0;background:var(--surface-2)}
+.proc{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(18px,2.5vw,30px);margin-top:clamp(46px,6vw,70px);counter-reset:step}
+.proc-step{border-top:1px solid var(--line-strong);padding-top:26px;position:relative;counter-increment:step}
+.proc-step::before{
+  content:"0" counter(step);
+  font-family:'Archivo',sans-serif;font-stretch:125%;font-weight:800;
+  font-size:clamp(27px,2.9vw,36px);letter-spacing:.02em;
+  color:transparent;-webkit-text-stroke:1px rgba(77,224,208,0.45);
+  display:block;margin-bottom:18px;line-height:1;
+}
+.proc-step h3{font-size:18px;font-weight:700;letter-spacing:-.015em}
+.proc-step .t{color:var(--mint);font-size:12.5px;margin-top:5px;font-weight:600;letter-spacing:.04em}
+.proc-step p{color:var(--sub);font-size:14.5px;margin-top:12px}
+
+/* ---------- S08 LAW ---------- */
+#law{padding:clamp(76px,9.5vw,130px) 0}
+.law-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(40px,6vw,90px);align-items:start}
+.law-left p{margin-top:22px;color:var(--sub);font-size:15.5px;max-width:26em}
+.law-list{list-style:none;border-top:1px solid var(--line)}
+.law-list li{
+  padding:22px 2px 22px 40px;border-bottom:1px solid var(--line);
+  font-size:clamp(15px,1.8vw,17px);font-weight:500;position:relative;letter-spacing:-.01em;
+}
+.law-list li::before{
+  content:"";position:absolute;left:4px;top:30px;
+  width:16px;height:9px;
+  border-left:2px solid var(--mint);border-bottom:2px solid var(--mint);
+  transform:rotate(-48deg);
+}
+.law-list li small{display:block;font-weight:400;color:var(--faint);font-size:13.5px;margin-top:5px}
+
+/* ---------- S10 FAQ ---------- */
+#faq{padding:clamp(76px,9.5vw,130px) 0;background:var(--surface-2)}
+.faq-wrap{max-width:820px;margin:clamp(40px,5vw,60px) auto 0;border-top:1px solid var(--line)}
+.faq-wrap details{border-bottom:1px solid var(--line)}
+.faq-wrap summary{
+  list-style:none;cursor:pointer;
+  padding:26px 44px 26px 4px;position:relative;
+  font-size:clamp(16px,1.9vw,18px);font-weight:600;letter-spacing:-.015em;
+  transition:color .3s;
+}
+.faq-wrap summary::-webkit-details-marker{display:none}
+.faq-wrap summary:hover{color:var(--mint-light)}
+.faq-wrap summary::after{
+  content:"";position:absolute;right:10px;top:50%;
+  width:11px;height:11px;
+  border-right:1.5px solid var(--faint);border-bottom:1.5px solid var(--faint);
+  transform:translateY(-70%) rotate(45deg);
+  transition:transform .35s var(--ease);
+}
+.faq-wrap details[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
+.faq-body{padding:0 4px 28px;color:var(--sub);font-size:15px;max-width:44em}
+
+/* ---------- S11 FINAL CTA / FOOTER ---------- */
+#final{padding:clamp(88px,11vw,150px) 0 clamp(60px,7.5vw,96px);overflow:hidden;position:relative}
+#final .gem-glow::before{width:90vmin;height:52vmin;top:30%;opacity:.5}
+#final .f-in{position:relative;z-index:2;text-align:center;max-width:760px;margin:0 auto;padding:0 24px}
+#final .h2{font-size:clamp(29px,3.8vw,44px)}
+#final .f-mission{
+  margin:26px auto 0;max-width:32em;
+  font-size:clamp(15.5px,1.6vw,17.5px);line-height:1.95;
+  color:#CBD4D0;font-weight:500;letter-spacing:-.005em;
+}
+#final .f-mission strong{color:var(--mint);font-weight:700}
+#final .lead{margin:20px auto 0;max-width:30em;font-size:clamp(13.5px,1.3vw,15px)}
+.final-actions{display:flex;gap:14px;justify-content:center;margin-top:44px;flex-wrap:wrap}
+.final-meta{margin-top:26px;color:var(--faint);font-size:13.5px}
+footer{border-top:1px solid var(--line);padding:34px 0;position:relative;z-index:2}
+.foot-in{
+  max-width:var(--max-w);margin:0 auto;padding:0 24px;
+  display:flex;flex-direction:column;gap:16px;
+  color:var(--faint);font-size:13px;
+}
+.foot-top{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.foot-biz{line-height:1.9;font-size:12.5px}
+.foot-copy{font-size:12px;opacity:.8}
+.foot-in .logo{font-size:15px}
+.foot-links{display:flex;gap:22px}
+.foot-links a{color:var(--faint);transition:color .3s}
+.foot-links a:hover{color:var(--mint)}
+
+/* ---------- 모바일 최적화 보강 ---------- */
+html{-webkit-text-size-adjust:100%}
+body{-webkit-tap-highlight-color:transparent}
+section{scroll-margin-top:76px}
+@media (max-width:960px){
+  .hero-cta{bottom:calc(34px + env(safe-area-inset-bottom))}
+  .nav-mobile{padding-bottom:env(safe-area-inset-bottom)}
+  .final-actions .btn-mint,.final-actions .btn-line{min-height:52px}
+}
+@media (max-width:640px){
+  .flip{min-height:232px}
+  .sel-btn{padding:12px 20px;font-size:14px}
+  .faq-wrap summary{padding-top:22px;padding-bottom:22px}
+  .prow .now{font-size:19px}
+  .case-banner{padding:26px 22px}
+  footer{padding-bottom:calc(34px + env(safe-area-inset-bottom))}
+}
+
+/* ---------- 포커스 ---------- */
+a:focus-visible,button:focus-visible,summary:focus-visible{
+  outline:2px solid var(--mint);outline-offset:3px;border-radius:4px;
+}
+
+/* ---------- 반응형 ---------- */
+@media (max-width:960px){
+  .nav-links{display:none}
+  .burger{display:block}
+  .hero-in{grid-template-columns:1fr;align-content:center;gap:34px;padding-top:100px;padding-bottom:130px}
+  .hero-title{font-size:clamp(23px,6vw,30px)}
+  .hero-points{
+    flex-direction:row;flex-wrap:wrap;gap:9px 20px;
+    text-align:left;align-items:center;
+  }
+  .hero-points .pt{flex-direction:row;font-size:11.5px;white-space:normal}
+  .hero-points .pt::after{width:4px;height:4px}
+  .hero-cta{bottom:34px;width:max-content}
+  .pain-grid,.law-grid{grid-template-columns:1fr}
+  .strat-panel{grid-template-columns:1fr}
+  .sol-cards{grid-template-columns:1fr;max-width:420px;margin:0 auto}
+  .flip{min-height:280px}
+  .compare{grid-template-columns:1fr}
+  .prow{grid-template-columns:1fr;gap:7px;padding:18px}
+  .prow .was{text-align:left;display:inline}
+  .prow .now{text-align:left;font-size:18px}
+  .prow .pr-line{display:flex;gap:12px;align-items:baseline}
+  .packs{grid-template-columns:1fr}
+  .pack.best{order:-1}
+  .proc{grid-template-columns:repeat(2,1fr);gap:36px 22px}
+}
+@media (max-width:640px){
+  .proc{grid-template-columns:1fr}
+  .case-banner{flex-direction:column;align-items:flex-start}
+  .final-actions{flex-direction:column}
+  .final-actions .btn-mint,.final-actions .btn-line{width:100%;justify-content:center}
+}
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "ProfessionalService",
+ "name": "맥스업마케팅",
+ "alternateName": "MaxUp Marketing",
+ "description": "병원마케팅 전문 대행사. 숏폼 제작, 병원 블로그 관리 대행, 네이버 플레이스 관리를 하나의 동선으로 연결합니다. 의료광고 사전심의 준수, 의료법 14개 금지유형 사전 체크, 환자 수 연동 없는 정액제.",
+ "url": "https://maxup-marketing.vercel.app/",
+ "image": "https://maxup-marketing.vercel.app/og.png",
+ "telephone": "+82-10-3346-0509",
+ "founder": {
+  "@type": "Person",
+  "name": "황두연"
+ },
+ "areaServed": {
+  "@type": "Country",
+  "name": "대한민국"
+ },
+ "knowsAbout": [
+  "병원마케팅",
+  "의료광고 사전심의",
+  "병원 블로그 관리",
+  "병의원 숏폼 제작",
+  "네이버 플레이스 관리"
+ ],
+ "sameAs": [
+  "https://www.instagram.com/maxup__marketing",
+  "http://pf.kakao.com/_FyxoXX"
+ ],
+ "priceRange": "월 35만원~"
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "가격이 시세보다 낮은데, 품질은 괜찮은가요?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "대표 2인이 기획부터 제작까지 직접 하는 구조라 중간 마진과 외주 비용이 없습니다. 블로그 콘텐츠는 외주 작가 없이 전량 직접 작성하고, 의료법 체크도 문장 단위로 내부에서 통제합니다. 가격이 낮은 건 품질을 줄여서가 아니라 구조가 가벼워서입니다."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "처음 개원한 병원도 괜찮나요?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "네, 오히려 처음부터 함께 설계하는 게 가장 효과적입니다. 신규 개원 병원을 우선으로 받고 있습니다."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "의료법 위반이 걱정됩니다.",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "14개 의료광고 금지유형을 사전 체크한 뒤 제작합니다. 과금은 정액제이며, 게시 전 병원 확인 절차를 거칩니다."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "촬영은 어떻게 진행되나요?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "촬영 전 브랜딩 인터뷰로 메시지를 먼저 설계합니다. 이후 월 2회 병원 방문 촬영으로 진행하며, 회당 2시간 내외로 원장님의 시간을 최소화합니다."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "계약 기간은 얼마나 되나요?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "최소 계약은 1개월입니다. 한 달 해보시고 결과와 일하는 방식을 보신 뒤 이어갈지 판단하시면 됩니다. 다만 콘텐츠 마케팅은 누적으로 쌓이는 구조라, 성과를 판단하실 때는 3개월 이상 운영해 보시길 권합니다."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "서비스별 단독 계약도 가능한가요?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "네, 가능합니다. 다만 영상과 검색 채널이 연결될수록 성과가 커지기 때문에, 상담 시 병원 상황에 맞는 조합을 추천드립니다."
+   }
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-in">
+    <a href="#hero" class="logo" aria-label="맥스업 홈">MAXUP</a>
+    <ul class="nav-links">
+      <li><a href="#solution">방식</a></li>
+      <li><a href="#strategy">전략</a></li>
+      <li><a href="#pricing">패키지</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a class="nav-cta" href="http://pf.kakao.com/_FyxoXX" target="_blank" rel="noopener">무료 진단 받기</a></li>
+    </ul>
+    <button class="burger" id="burger" aria-label="메뉴 열기" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-mobile" id="navMobile">
+  <a href="#solution" onclick="closeNav()">방식</a>
+  <a href="#strategy" onclick="closeNav()">전략</a>
+  <a href="#pricing" onclick="closeNav()">패키지</a>
+  <a href="#faq" onclick="closeNav()">FAQ</a>
+  <a class="nav-cta" href="http://pf.kakao.com/_FyxoXX" target="_blank" rel="noopener">무료 진단 받기</a>
+</div>
+
+<!-- S01 HERO -->
+<section id="hero">
+  <div class="hero-media">
+    <!-- 시댄스 루프 영상 준비되면 source 주석 해제 후 파일 경로 입력.
+         poster에는 영상 첫 프레임 이미지(webp 권장) 지정 — 모바일 즉시 표시용 -->
+    <video autoplay muted loop playsinline poster="assets/gem-poster.webp" id="heroVideo" style="display:none">
+      <source src="assets/gem-loop.webm" type="video/webm">
+      <source src="assets/gem-loop.mp4" type="video/mp4">
+    </video>
+    <div class="gem-glow" aria-hidden="true"></div>
+  </div>
+  <div class="hero-vignette" aria-hidden="true"></div>
+
+  <div class="hero-in">
+    <div>
+      <p class="hero-eyebrow rv">Medical clinic marketing</p>
+      <h1 class="hero-title rv rv-d1">원장님의 잠재력을,<br><em>최대치</em>까지 끌어올립니다.</h1>
+      <p class="hero-sub rv rv-d2">진료 철학, 쌓아온 실력, 환자의 신뢰 —<br>원장님이 이미 가진 자산이 내원이 되도록 만듭니다.</p>
+    </div>
+    <div class="hero-points rv rv-d3">
+      <div class="pt"><span>의료법 14개 금지유형 사전 체크</span></div>
+      <div class="pt"><span>환자 수 연동 없는 정액제 과금</span></div>
+      <div class="pt"><span>기획 · 촬영 · 편집 · 업로드 일괄</span></div>
+      <div class="pt"><span>최소 계약 1개월</span></div>
+    </div>
+  </div>
+
+  <a class="hero-cta rv rv-d4" href="http://pf.kakao.com/_FyxoXX" target="_blank" rel="noopener">무료 진단 받기 <span aria-hidden="true">→</span></a>
+
+</section>
+
+<!-- 마키 -->
+<div class="marquee" aria-hidden="true">
+  <div class="mq-track">
+    <span>숏폼 기획·제작</span><span>원장 브랜딩</span><span>네이버 블로그</span><span>플레이스 관리</span><span>의료법 사전 체크</span><span>월간 성과 리포트</span>
+    <span>숏폼 기획·제작</span><span>원장 브랜딩</span><span>네이버 블로그</span><span>플레이스 관리</span><span>의료법 사전 체크</span><span>월간 성과 리포트</span>
+  </div>
+</div>
+
+<!-- S02a 스크롤 시퀀스 -->
+<section id="seq" aria-label="원장님들이 겪는 문제">
+  <div class="seq-sticky">
+    <div class="seq-item">
+      <p>"마케팅 업체를 세 번 바꿨는데,<br>달라진 게 없어요."</p>
+    </div>
+    <div class="seq-item">
+      <p>"영상이요? 올려는 봤죠.<br>반응이 없어서 그만뒀습니다."</p>
+    </div>
+    <div class="seq-item">
+      <p>환자는 <strong>3초</strong> 안에<br>다른 병원으로 넘어갑니다.</p>
+    </div>
+    <div class="seq-item">
+      <p class="seq-eyebrow">The turning point</p>
+      <p>환자가 <em>원장님</em>을<br>먼저 찾아오게 만든다면.</p>
+    </div>
+    <div class="seq-hint" id="seqHint">SCROLL</div>
+  </div>
+</section>
+
+<!-- S02 PAIN -->
+<section id="pain">
+  <div class="inner">
+    <div class="pain-grid">
+      <div class="rv">
+        <p class="eyebrow">The problem</p>
+        <h2 class="h2">업체를 써도<br>성과가 없는 이유</h2>
+        <p class="lead" style="margin-top:22px;max-width:24em">문제는 원장님의 실력이 아닙니다.<br>그걸 보여줄 구조가 없었을 뿐입니다.</p>
+      </div>
+      <div class="pain-list rv rv-d1">
+        <div class="pain-item">
+          <span class="no">01</span>
+          <div><p>블로그가 몇 달째 멈춰 있다</p><small>진료가 바빠 손댈 시간이 없고, 맡길 사람도 없습니다.</small></div>
+        </div>
+        <div class="pain-item">
+          <span class="no">02</span>
+          <div><p>영상을 올려도 반응이 없다</p><small>퀄리티 문제가 아니라, 저장·공유를 만드는 기획 구조가 없는 겁니다.</small></div>
+        </div>
+        <div class="pain-item">
+          <span class="no">03</span>
+          <div><p>대행사에 맡겼는데 뭘 하는지 모르겠다</p><small>리포트 없이 결과물만 오가면, 돈이 어디로 가는지 알 수 없습니다.</small></div>
+        </div>
+        <div class="pain-item">
+          <span class="no">04</span>
+          <div><p>의료법 위반이 될까 불안하다</p><small>치료경험담·전후사진·효과 과장 — 모르고 올리면 병원이 책임집니다.</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- S03 SOLUTION -->
+<section id="solution">
+  <div class="inner">
+    <div class="head rv">
+      <p class="eyebrow">How it works</p>
+      <h2 class="h2">숨어 있던 실력이<br><em>내원</em>이 되기까지</h2>
+    </div>
+    <div class="sol-cards">
+      <div class="flip rv" tabindex="0" role="button" aria-expanded="false">
+        <div class="flip-inner">
+          <div class="flip-face flip-front">
+            <span class="fno">01</span>
+            <p class="fkey">노출</p>
+            <h3>숏폼으로 원장님을<br>알고리즘에 태웁니다</h3>
+          </div>
+          <div class="flip-face flip-back">
+            <span class="bk">01 — 발굴</span>
+            <h4>원장님 안에 이미 있는<br>이야기를 꺼냅니다</h4>
+            <p>진료 철학, 자주 받는 질문, 치료 원리. 새로 만드는 게 아니라 이미 있는 것을 숏폼으로 꺼내 알고리즘에 태웁니다.</p>
+          </div>
+        </div>
+      </div>
+      <div class="flip rv rv-d1" tabindex="0" role="button" aria-expanded="false">
+        <div class="flip-inner">
+          <div class="flip-face flip-front">
+            <span class="fno">02</span>
+            <p class="fkey">신뢰</p>
+            <h3>검색 채널에서<br>믿음을 만듭니다</h3>
+          </div>
+          <div class="flip-face flip-back">
+            <span class="bk">02 — 세공</span>
+            <h4>영상을 본 환자는<br>반드시 검색합니다</h4>
+            <p>그때 만나는 블로그·플레이스·홈페이지를 정돈합니다. 노출이 신뢰로 바뀌는 구간이고, 여기가 비어 있으면 앞의 노출이 전부 새어 나갑니다.</p>
+          </div>
+        </div>
+      </div>
+      <div class="flip rv rv-d2" tabindex="0" role="button" aria-expanded="false">
+        <div class="flip-inner">
+          <div class="flip-face flip-front">
+            <span class="fno">03</span>
+            <p class="fkey">유입</p>
+            <h3>내원까지의 동선을<br>하나로 잇습니다</h3>
+          </div>
+          <div class="flip-face flip-back">
+            <span class="bk">03 — 연결</span>
+            <h4>영상 → 검색 → 예약,<br>끊긴 데 없이</h4>
+            <p>콘텐츠가 내원으로 바뀌는 건 동선이 이어져 있을 때뿐입니다. 채널 사이의 빈틈을 메우는 것까지가 맥스업의 일입니다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- S04 STRATEGY -->
+<section id="strategy">
+  <div class="inner">
+    <div class="strat-head rv">
+      <div>
+        <p class="eyebrow">Strategy</p>
+        <h2 class="h2">병원마다<br>전략이 다릅니다</h2>
+      </div>
+      <p class="lead" style="max-width:24em">지금 병원 상황을 골라보세요.<br>시작해야 할 채널의 순서가 달라집니다.</p>
+    </div>
+    <div class="sel-row rv">
+      <button class="sel-btn active" data-type="new" onclick="selectStrategy(this)">신규 개원했어요</button>
+      <button class="sel-btn" data-type="noreact" onclick="selectStrategy(this)">채널은 있는데 반응이 없어요</button>
+      <button class="sel-btn" data-type="fan" onclick="selectStrategy(this)">팬층을 만들고 싶어요</button>
+    </div>
+    <div class="strat-panel rv" id="stratPanel">
+      <div>
+        <span class="strat-tag" id="stag">신규 개원</span>
+        <h3 class="strat-title" id="stitle">먼저 존재감을
+만들어야 합니다</h3>
+        <p class="strat-desc" id="sdesc">처음 개원한 병원은 알려지는 것이 최우선입니다. 네이버 플레이스로 즉시 검색 유입을 확보하고, 인스타그램으로 원장님의 얼굴과 철학을 노출합니다. 유튜브는 아직 이릅니다.</p>
+        <a class="btn-line strat-cta" href="http://pf.kakao.com/_FyxoXX" target="_blank" rel="noopener" id="scta">신규 개원 전략 상담받기</a>
+      </div>
+      <div class="ch-list" id="chList"></div>
+    </div>
+  </div>
+</section>
+
+<!-- S06 PRICING -->
+<section id="pricing">
+  <div class="inner">
+    <div class="rv">
+      <p class="eyebrow">Pricing</p>
+      <h2 class="h2">병원에 맞는 구성만<br><em>골라서</em> 시작하세요</h2>
+      <p class="lead" style="margin-top:22px;max-width:36em">영상은 편당, 블로그는 발행량 구간으로 가격을 정했습니다. 필요한 상품만 골라 조합하실 수 있습니다. 최소 계약은 1개월 — 부담 없이 시작하고, 이어갈지는 결과로 판단하시면 됩니다.</p>
+      <div class="case-strip">
+        <span>정가 단일제 · 별도 할인 없음</span>
+        <span>최소 계약 1개월</span>
+        <span>환자 수 연동 없는 정액제</span>
+        <span>게시 전 병원 확인</span>
+      </div>
+    </div>
+
+    <div class="compare">
+      <div class="cmp-col rv">
+        <p class="who">정규직 마케터 채용</p>
+        <p class="price">월 300만원<small> + 4대보험</small></p>
+        <ul>
+          <li>채용·교육에 최소 수개월</li>
+          <li>기획·촬영·편집을 혼자 감당</li>
+          <li>퇴사하면 처음부터 다시</li>
+        </ul>
+      </div>
+      <div class="cmp-col rv rv-d1">
+        <p class="who">건별 외주 제작</p>
+        <p class="price">건당 30만원~<small> 편차 큼</small></p>
+        <ul>
+          <li>전략 없이 결과물만 납품</li>
+          <li>업로드·운영은 결국 병원 몫</li>
+          <li>의료법 검토는 아무도 안 함</li>
+        </ul>
+      </div>
+      <div class="cmp-col hl rv rv-d2">
+        <p class="who">맥스업 정액제</p>
+        <p class="price">월 35만원부터</p>
+        <ul>
+          <li>기획 · 촬영 · 편집 · 업로드 일괄</li>
+          <li>의료법 14개 금지유형 사전 체크</li>
+          <li>매월 성과 리포트 + 통화 브리핑</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="ptabs rv">
+      <button class="sel-btn active" data-pg="pg-insta" onclick="selectPg(this)">인스타 패키지</button>
+      <button class="sel-btn" data-pg="pg-youtube" onclick="selectPg(this)">유튜브 패키지</button>
+      <button class="sel-btn" data-pg="pg-blog" onclick="selectPg(this)">블로그 · 플레이스</button>
+    </div>
+
+    <div class="pgroup rv" id="pg-insta">
+      <div class="pgroup-head">
+        <h3>인스타 패키지</h3>
+        <small>인스타그램 + 유튜브 쇼츠 동시 발행 · 편당 20만원</small>
+      </div>
+      <div class="prow">
+        <p class="nm">Basic</p>
+        <p class="cfg">숏폼 월 4편 (주 1회) · 업로드 대행 · 성과 리포트</p>
+        <p class="was"></p>
+        <p class="now">80만원 <small>/ 월</small></p>
+      </div>
+      <div class="prow">
+        <p class="nm">Standard</p>
+        <p class="cfg">숏폼 월 8편 (주 2회) · 월 2회 방문 촬영 · 성과 리포트</p>
+        <p class="was"></p>
+        <p class="now">160만원 <small>/ 월</small></p>
+      </div>
+      <div class="prow">
+        <p class="nm">VIP</p>
+        <p class="cfg">숏폼 월 12편 (주 3회) · 전담 PD · 월 4회 방문 촬영 · 성과 리포트</p>
+        <p class="was"></p>
+        <p class="now">240만원 <small>/ 월</small></p>
+      </div>
+    </div>
+
+    <div class="pgroup" id="pg-youtube" hidden>
+      <div class="pgroup-head">
+        <h3>유튜브 패키지</h3>
+        <small>롱폼으로 전문성과 팬층을 쌓는 채널 · 편당 60만원</small>
+      </div>
+      <div class="prow">
+        <p class="nm">Basic</p>
+        <p class="cfg">롱폼 월 2편 · 쇼츠 재가공 · 성과 리포트</p>
+        <p class="was"></p>
+        <p class="now">120만원 <small>/ 월</small></p>
+      </div>
+      <div class="prow">
+        <p class="nm">Standard</p>
+        <p class="cfg">롱폼 월 4편 · 쇼츠 재가공 · 성과 리포트</p>
+        <p class="was"></p>
+        <p class="now">240만원 <small>/ 월</small></p>
+      </div>
+      <div class="prow">
+        <p class="nm">VIP</p>
+        <p class="cfg">롱폼 월 8편 · 쇼츠 재가공 · 성과 리포트</p>
+        <p class="was"></p>
+        <p class="now">480만원 <small>/ 월</small></p>
+      </div>
+    </div>
+
+    <div class="pgroup" id="pg-blog" hidden>
+      <div class="pgroup-head">
+        <h3>블로그 · 플레이스</h3>
+        <small>업종 무관 단일 가격 · 전량 직접 작성 (외주 없음)</small>
+      </div>
+      <div class="prow">
+        <p class="nm">블로그 STANDARD</p>
+        <p class="cfg">월 8편 (주 2회) · 키워드 설계 · 썸네일 디자인 · 월간 리포트</p>
+        <p class="was"></p>
+        <p class="now">35만원 <small>/ 월</small></p>
+      </div>
+      <div class="prow">
+        <p class="nm">블로그 DELUXE</p>
+        <p class="cfg">월 12편 (주 3회) · 키워드 설계 · 썸네일 디자인 · 콘텐츠 4축 설계 · 콘텐츠 캘린더 · 월간 리포트</p>
+        <p class="was"></p>
+        <p class="now">45만원 <small>/ 월</small></p>
+      </div>
+      <div class="prow">
+        <p class="nm">블로그 PREMIUM</p>
+        <p class="cfg">월 16편 (주 4회) · DELUXE 구성 전체 · 블로그 초기 세팅 · 플레이스 정보 정비 가이드</p>
+        <p class="was"></p>
+        <p class="now">55만원 <small>/ 월</small></p>
+      </div>
+      <div class="prow">
+        <p class="nm">블로그 홈페이지형 개선</p>
+        <p class="cfg">상단·카테고리·디자인 정비 · 1회성 (1회 무료 수정 · PREMIUM은 포함)</p>
+        <p class="was"></p>
+        <p class="now">20만원 <small>/ 1회</small></p>
+      </div>
+      <div class="prow">
+        <p class="nm">플레이스 관리</p>
+        <p class="cfg">리뷰 모니터링 · 사진·정보 업데이트</p>
+        <p class="was"></p>
+        <p class="now">협의</p>
+      </div>
+    </div>
+
+    <div class="packs-title rv">
+      <h3>추천 조합</h3>
+      <small>병원 상황별로 가장 많이 제안하는 구성입니다</small>
+    </div>
+    <div class="packs">
+      <div class="pack best rv">
+        <span class="flag">추천 구성</span>
+        <h3>영상 시작</h3>
+        <p class="for">인스타 Standard</p>
+        <div class="pr"><span class="now">160만원</span><span class="per">/ 월</span></div>
+        <ul>
+          <li>숏폼 월 8편 (주 2회) · 월 2회 방문 촬영</li>
+          <li>인스타그램 + 유튜브 쇼츠 동시 발행</li>
+          <li>월간 성과 리포트 + 10분 통화 브리핑</li>
+        </ul>
+        <a class="btn-mint" href="http://pf.kakao.com/_FyxoXX" target="_blank" rel="noopener">상담하기 <span class="arr">→</span></a>
+      </div>
+      <div class="pack rv rv-d1">
+        <h3>영상 + 검색</h3>
+        <p class="for">인스타 Standard + 블로그 DELUXE</p>
+        <div class="pr"><span class="now">205만원</span><span class="per">/ 월</span></div>
+        <ul>
+          <li>영상 시작 구성 전체 포함</li>
+          <li>네이버 블로그 월 12편 (주 3회) · 콘텐츠 캘린더</li>
+        </ul>
+        <a class="btn-line" href="http://pf.kakao.com/_FyxoXX" target="_blank" rel="noopener">상담하기</a>
+      </div>
+      <div class="pack rv rv-d2">
+        <h3>풀패키지</h3>
+        <p class="for">인스타 Standard + 유튜브 Basic + 블로그 DELUXE</p>
+        <div class="pr"><span class="now">325만원</span><span class="per">/ 월</span></div>
+        <ul>
+          <li>영상 + 검색 구성 전체 포함</li>
+          <li>유튜브 롱폼 월 2편 + 쇼츠 재가공</li>
+        </ul>
+        <a class="btn-line" href="http://pf.kakao.com/_FyxoXX" target="_blank" rel="noopener">상담하기</a>
+      </div>
+    </div>
+
+    <div class="case-banner rv">
+      <div>
+        <h3>먼저 <em>한 달</em>만 해보시고 판단하세요</h3>
+        <p>최소 계약은 1개월입니다. 한 달 진행해 보시고, 결과와 저희가 일하는 방식을 보신 뒤 이어갈지 결정하시면 됩니다. 조회수·문의 건수를 숫자로 보장하는 제안은 드리지 않습니다 — 계약한 편수를 기한 안에 만들어 발행하는 것을 약속합니다.</p>
+      </div>
+      <a class="btn-mint" href="http://pf.kakao.com/_FyxoXX" target="_blank" rel="noopener">한 달 시작 문의하기 <span class="arr">→</span></a>
+    </div>
+    <p class="pricing-note rv">모든 과금은 정액제입니다. 환자 수·매출 연동 과금은 의료법 27조 3항 위반이며, 맥스업은 이를 따르지 않는 제안을 드리지 않습니다. 광고 주체는 항상 병원 명의이고, 모든 콘텐츠는 게시 전 병원 확인을 거칩니다.</p>
+  </div>
+</section>
+
+<!-- S07 PROCESS -->
+<section id="process">
+  <div class="inner">
+    <div class="rv">
+      <p class="eyebrow">Process</p>
+      <h2 class="h2">시작은 링크 하나면 됩니다</h2>
+    </div>
+    <div class="proc">
+      <div class="proc-step rv">
+        <h3>무료 진단</h3>
+        <p class="t">48시간 이내</p>
+        <p>카카오톡이나 인스타 DM으로 병원 채널 링크만 보내주세요. 현재 상태를 진단해 회신드립니다.</p>
+      </div>
+      <div class="proc-step rv rv-d1">
+        <h3>브랜딩 인터뷰</h3>
+        <p class="t">계약 후 첫 주</p>
+        <p>원장님만의 강점이 어디에 있는지 인터뷰로 찾아내고, 콘텐츠 캘린더로 설계합니다.</p>
+      </div>
+      <div class="proc-step rv rv-d2">
+        <h3>방문 촬영</h3>
+        <p class="t">패키지별 월 2~4회 · 회당 2시간</p>
+        <p>병원으로 찾아가 한 번에 몰아서 촬영합니다. 원장님의 시간을 최소로 씁니다.</p>
+      </div>
+      <div class="proc-step rv rv-d3">
+        <h3>편집 · 발행 · 리포트</h3>
+        <p class="t">매주 업로드</p>
+        <p>편집과 업로드까지 대행하고, 매월 성과 리포트를 10분 통화로 직접 브리핑합니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- S08 LAW -->
+<section id="law">
+  <div class="inner">
+    <div class="law-grid">
+      <div class="law-left rv">
+        <p class="eyebrow">Compliance</p>
+        <h2 class="h2">의료법,<br>맥스업이 먼저<br>확인합니다</h2>
+        <p>의료광고는 일반 마케팅과 다릅니다. 잘 만든 콘텐츠보다 먼저 갖춰야 할 것은, 문제가 되지 않는 콘텐츠입니다.</p>
+      </div>
+      <ul class="law-list">
+        <li class="rv">광고 주체는 항상 병원<small>맥스업은 제작·운영 대행자로만 움직입니다.</small></li>
+        <li class="rv rv-d1">14개 의료광고 금지유형 사전 체크<small>치료경험담 · 전후사진 · 효과 과장 · 비교광고를 제작 전에 거릅니다.</small></li>
+        <li class="rv rv-d2">과금은 정액제<small>환자 수 연동 과금은 의료법 27조 위반입니다. 하지 않습니다.</small></li>
+        <li class="rv rv-d3">게시 전 병원 확인<small>모든 콘텐츠는 병원 확인을 거친 뒤에만 발행됩니다.</small></li>
+        <li class="rv rv-d4">의료광고 사전심의 절차 준수<small>심의 대상에 해당하는 매체·콘텐츠는 심의를 거친 뒤 발행합니다.</small></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- S09 후기 — 첫 사례 계약 후 활성화할 슬롯. v1에서는 미노출.
+<section id="reviews"></section>
+-->
+
+<!-- S10 FAQ -->
+<section id="faq">
+  <div class="inner">
+    <div class="rv" style="text-align:center">
+      <p class="eyebrow" style="justify-content:center">FAQ</p>
+      <h2 class="h2">자주 묻는 질문</h2>
+    </div>
+    <div class="faq-wrap rv">
+      <details>
+        <summary>가격이 시세보다 낮은데, 품질은 괜찮은가요?</summary>
+        <p class="faq-body">대표 2인이 기획부터 제작까지 직접 하는 구조라 중간 마진과 외주 비용이 없습니다. 블로그 콘텐츠는 외주 작가 없이 전량 직접 작성하고, 의료법 체크도 문장 단위로 내부에서 통제합니다. 가격이 낮은 건 품질을 줄여서가 아니라 구조가 가벼워서입니다.</p>
+      </details>
+      <details>
+        <summary>처음 개원한 병원도 괜찮나요?</summary>
+        <p class="faq-body">네, 오히려 처음부터 함께 설계하는 게 가장 효과적입니다. 신규 개원 병원을 우선으로 받고 있습니다.</p>
+      </details>
+      <details>
+        <summary>의료법 위반이 걱정됩니다.</summary>
+        <p class="faq-body">14개 의료광고 금지유형을 사전 체크한 뒤 제작합니다. 과금은 정액제이며, 게시 전 병원 확인 절차를 거칩니다.</p>
+      </details>
+      <details>
+        <summary>촬영은 어떻게 진행되나요?</summary>
+        <p class="faq-body">촬영 전 브랜딩 인터뷰로 메시지를 먼저 설계합니다. 이후 월 2회 병원 방문 촬영으로 진행하며, 회당 2시간 내외로 원장님의 시간을 최소화합니다.</p>
+      </details>
+      <details>
+        <summary>계약 기간은 얼마나 되나요?</summary>
+        <p class="faq-body">최소 계약은 1개월입니다. 한 달 해보시고 결과와 일하는 방식을 보신 뒤 이어갈지 판단하시면 됩니다. 다만 콘텐츠 마케팅은 누적으로 쌓이는 구조라, 성과를 판단하실 때는 3개월 이상 운영해 보시길 권합니다.</p>
+      </details>
+      <details>
+        <summary>서비스별 단독 계약도 가능한가요?</summary>
+        <p class="faq-body">네, 가능합니다. 다만 영상과 검색 채널이 연결될수록 성과가 커지기 때문에, 상담 시 병원 상황에 맞는 조합을 추천드립니다.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- S11 FINAL CTA -->
+<section id="final">
+  <div class="gem-glow" aria-hidden="true"></div>
+  <div class="f-in">
+    <p class="eyebrow rv" style="justify-content:center">Start</p>
+    <h2 class="h2 rv rv-d1">채널 링크 하나만<br>보내주세요</h2>
+    <p class="f-mission rv rv-d2">진료 철학, 쌓아온 실력, 환자의 신뢰 —<br>원장님이 이미 가진 자산을 마케팅으로 바꿔<br>내원을 최대치까지 끌어올리는 것. 그게 맥스업이 하는 일입니다.</p>
+    <p class="lead rv rv-d3">48시간 안에, 원장님 채널에 잠들어 있는 가능성을 진단해 보내드립니다.<br>계약 여부와 무관하게, 진단은 그냥 드리는 겁니다.</p>
+    <div class="final-actions rv rv-d3">
+      <a class="btn-mint" href="http://pf.kakao.com/_FyxoXX" target="_blank" rel="noopener">카카오로 링크 보내기 <span class="arr">→</span></a>
+      <a class="btn-line" href="https://www.instagram.com/maxup__marketing" target="_blank" rel="noopener">인스타 DM 보내기</a>
+    </div>
+    <p class="final-meta rv rv-d4">최소 계약 1개월 · 환자 수 연동 없는 정액제</p>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-in">
+    <div class="foot-top">
+      <span class="logo">MAXUP</span>
+      <div class="foot-links">
+        <a href="http://pf.kakao.com/_FyxoXX" target="_blank" rel="noopener">카카오톡</a>
+        <a href="https://www.instagram.com/maxup__marketing" target="_blank" rel="noopener">인스타그램</a>
+        <a href="tel:010-3346-0509">010-3346-0509</a>
+      </div>
+    </div>
+    <p class="foot-biz">맥스업마케팅 · 대표 황두연 · 사업자등록번호 649-31-01735 · 010-3346-0509</p>
+    <span class="foot-copy">© 2026 MAXUP. 의료 클리닉 전문 마케팅</span>
+  </div>
+</footer>
+
+<script>
+/* 네비게이션 */
+const nav = document.getElementById('nav');
+addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 30), {passive:true});
+function toggleNav(){
+  document.getElementById('burger').classList.toggle('open');
+  document.getElementById('navMobile').classList.toggle('open');
+}
+function closeNav(){
+  document.getElementById('burger').classList.remove('open');
+  document.getElementById('navMobile').classList.remove('open');
+}
+
+/* 히어로 영상 — source가 있으면 표시 */
+const hv = document.getElementById('heroVideo');
+if (hv.querySelector('source')){
+  hv.style.display = 'block';
+  hv.addEventListener('error', () => hv.style.display = 'none', true);
+  const lastSrc = hv.querySelectorAll('source');
+  lastSrc[lastSrc.length-1].addEventListener('error', () => hv.style.display = 'none');
+}
+
+/* 스크롤 리빌 */
+const io = new IntersectionObserver(es => {
+  es.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+}, {threshold:.12, rootMargin:'0px 0px -8% 0px'});
+document.querySelectorAll('.rv').forEach(el => io.observe(el));
+
+/* 핀 고정 스크롤 시퀀스 */
+(function(){
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const seq = document.getElementById('seq');
+  const items = seq.querySelectorAll('.seq-item');
+  const hint = document.getElementById('seqHint');
+  const n = items.length;
+  const clamp = (v,a,b) => Math.min(b, Math.max(a, v));
+  let ticking = false;
+
+  function render(){
+    ticking = false;
+    const rect = seq.getBoundingClientRect();
+    const total = rect.height - innerHeight;
+    const progress = clamp(-rect.top / total, 0, 1);
+    const seg = 1 / n;
+
+    items.forEach((el, i) => {
+      /* 각 문장의 구간 내 진행도 0~1 */
+      const local = clamp((progress - i * seg) / seg, 0, 1);
+      let op, y;
+      const isLast = i === n - 1;
+      if (local <= 0.3){            /* 진입: 아래에서 올라오며 페이드인 */
+        const t = local / 0.3;
+        op = t; y = 64 * (1 - t);
+      } else if (local < 0.7 || isLast){  /* 유지 (마지막 문장은 퇴장 없음) */
+        op = 1; y = 0;
+      } else {                      /* 퇴장: 위로 올라가며 페이드아웃 */
+        const t = (local - 0.7) / 0.3;
+        op = 1 - t; y = -64 * t;
+      }
+      el.style.opacity = op;
+      el.style.transform = 'translate(-50%, calc(-50% + ' + y.toFixed(1) + 'px))';
+    });
+
+    hint.style.opacity = progress > 0.06 ? 0 : 1;
+  }
+
+  addEventListener('scroll', () => {
+    if (!ticking){ ticking = true; requestAnimationFrame(render); }
+  }, {passive:true});
+  addEventListener('resize', render);
+  render();
+})();
+
+/* 가격 탭 전환 */
+function selectPg(btn){
+  document.querySelectorAll('.ptabs .sel-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.pgroup').forEach(g => g.hidden = true);
+  document.getElementById(btn.dataset.pg).hidden = false;
+}
+
+/* 플립 카드 — 터치·키보드 토글 */
+document.querySelectorAll('.flip').forEach(card => {
+  card.addEventListener('click', () => {
+    card.classList.toggle('on');
+    card.setAttribute('aria-expanded', card.classList.contains('on'));
+  });
+  card.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' '){
+      e.preventDefault();
+      card.click();
+    }
+  });
+});
+
+/* 병원 유형별 전략 */
+const strategyData = {
+  new: {
+    tag:'신규 개원',
+    title:'먼저 존재감을\n만들어야 합니다',
+    desc:'처음 개원한 병원은 알려지는 것이 최우선입니다. 네이버 플레이스로 즉시 검색 유입을 확보하고, 인스타그램으로 원장님의 얼굴과 철학을 노출합니다. 유튜브는 아직 이릅니다.',
+    cta:'신규 개원 전략 상담받기',
+    channels:[
+      {name:'네이버 플레이스', dots:5, rank:'1순위'},
+      {name:'인스타그램', dots:4, rank:'2순위'},
+      {name:'네이버 블로그', dots:3, rank:'3순위'},
+      {name:'유튜브', dots:1, rank:'보류'}
+    ]
+  },
+  noreact: {
+    tag:'반응 없는 채널',
+    title:'구조가 없으면\n알고리즘이 외면합니다',
+    desc:'채널은 있는데 반응이 없다면 퀄리티 문제가 아닙니다. 기획 구조가 없는 겁니다. 일상 키워드로 타겟층을 넓히고, 저장·공유를 유도하는 콘텐츠 구조로 재설계합니다.',
+    cta:'채널 구조 재설계 상담받기',
+    channels:[
+      {name:'인스타그램', dots:5, rank:'1순위'},
+      {name:'네이버 블로그', dots:4, rank:'2순위'},
+      {name:'유튜브', dots:3, rank:'3순위'},
+      {name:'네이버 플레이스', dots:3, rank:'3순위'}
+    ]
+  },
+  fan: {
+    tag:'팬층 전환 목표',
+    title:'원장님 영상이\n24시간 영업사원이 됩니다',
+    desc:'단순 노출을 넘어 팬층을 만들려면 롱폼 콘텐츠가 필요합니다. 유튜브로 전문성을 쌓고, 블로그로 검색 유입을 보완합니다. 원장님이 브랜딩되면 환자는 병원이 아니라 원장님을 찾아옵니다.',
+    cta:'팬층 전환 전략 상담받기',
+    channels:[
+      {name:'유튜브', dots:5, rank:'1순위'},
+      {name:'네이버 블로그', dots:4, rank:'2순위'},
+      {name:'인스타그램', dots:3, rank:'3순위'},
+      {name:'네이버 플레이스', dots:2, rank:'보조'}
+    ]
+  }
+};
+
+function renderChannels(chs){
+  const list = document.getElementById('chList');
+  list.innerHTML = '';
+  chs.forEach((ch, i) => {
+    const dim = ch.rank === '보류' || ch.rank === '보조';
+    const row = document.createElement('div');
+    row.className = 'ch-row';
+    row.innerHTML =
+      '<div class="ch-name">' + ch.name +
+      '<span class="ch-rank' + (dim ? ' dim' : '') + '">' + ch.rank + '</span></div>' +
+      '<div class="dots">' +
+      Array.from({length:5}, (_, j) =>
+        '<span class="dot ' + (j < ch.dots ? (dim ? 'dim-on' : 'on') : '') + '"></span>'
+      ).join('') + '</div>';
+    list.appendChild(row);
+    setTimeout(() => row.classList.add('show'), 90 * i + 60);
+  });
+}
+
+function selectStrategy(btn){
+  document.querySelectorAll('.sel-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const d = strategyData[btn.dataset.type];
+  const panel = document.getElementById('stratPanel');
+  panel.classList.add('fade');
+  setTimeout(() => {
+    document.getElementById('stag').textContent = d.tag;
+    document.getElementById('stitle').textContent = d.title;
+    document.getElementById('sdesc').textContent = d.desc;
+    document.getElementById('scta').textContent = d.cta;
+    renderChannels(d.channels);
+    panel.classList.remove('fade');
+  }, 280);
+}
+
+renderChannels(strategyData.new.channels);
+
+/* FAQ — 하나만 열리게 */
+document.querySelectorAll('.faq-wrap details').forEach(d => {
+  d.addEventListener('toggle', () => {
+    if (d.open) document.querySelectorAll('.faq-wrap details').forEach(o => { if (o !== d) o.open = false; });
+  });
+});
+</script>
+</body>
+</html>
